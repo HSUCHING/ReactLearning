@@ -11,6 +11,7 @@
 
 <div>
     <div id="nuno"></div>
+    <div id="juno"></div>
 </div>
 
 </body>
@@ -26,7 +27,7 @@
     MysearchPage.Title=React.createClass({
         render:function(){
             return (
-                    <h1>MysearchPage!</h1>
+                    <h1 {...props_Search}>MysearchPage!</h1>
             );
         }
     });
@@ -40,17 +41,57 @@
             );
         }
     });
-    var SearchPage=MysearchPage;
 
+    var props_Search={};
+    props_Search.className="search";
+
+    var SearchPage=MysearchPage;
+    var SearchPage_1=<MysearchPage/>;
+//    var App=(
+//            <SearchPage>
+//                <SearchPage.Title/>
+//                <SearchPage.Search searchType="Content"/>
+//            </SearchPage>
+//    );
 
     var App=(
-            React.createElement(SearchPage, {title:"Welcome"},
-                            null, React.createElement(SearchPage.Title, null),
-                            React.createElement(SearchPage.Search, {searchType:"Content"}))
+            <div>
+            {SearchPage_1}
+            </div>
+
     );
+//    var App=(
+//            React.createElement(SearchPage, {title:"Welcome"},
+//                            React.createElement(SearchPage.Title, null),
+//                            React.createElement(SearchPage.Search, {searchType:"Content"}))
+//    );
     React.render(
             App,
             document.getElementById('nuno')
     );
+
+    var Nav = React.createClass({
+        render: function () {
+            return <div>nav</div>
+        }
+    });
+
+    var props={};
+    props.className="x";
+    //props.id="z";
+    var props2={};
+    var componentdiv=<div {...props2}>component2</div>;
+    props2.className="y";
+    props2.id="zz";
+    React.render(
+            <div id={2>1?'msg':'msg2'}>
+                {2 > 1 ? <Nav/> : <div>div</div>}
+                <div {...props} className={'y'} id={'ou'}>component</div>
+                {componentdiv}
+            </div>,
+            document.getElementById('juno')
+    );
+    props.id="z";
+
 </script>
 </html>
