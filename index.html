@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>React</title>
+    <script type="text/javascript" src="js/react.js"></script>
+    <script type="text/javascript" src="js/JSXTransformer.js"></script>
+</head>
+<body>
+
+<div>
+    <div id="nuno"></div>
+</div>
+
+</body>
+
+<script type="text/jsx">
+    var MysearchPage=React.createClass({
+        render:function(){
+            return (
+                    <div>{this.props.title}:{React.Children.count(this.props.children)}:{this.props.children}</div>
+            );
+        }
+    });
+    MysearchPage.Title=React.createClass({
+        render:function(){
+            return (
+                    <h1>MysearchPage!</h1>
+            );
+        }
+    });
+    MysearchPage.Search= React.createClass({
+        render:function(){
+            return (
+                    <div>
+                        {this.props.searchType}:<input type="text"/>
+                        <button>Search</button>
+                    </div>
+            );
+        }
+    });
+    var SearchPage=MysearchPage;
+
+
+    var App=(
+            React.createElement(SearchPage, {title:"Welcome"},
+                            null, React.createElement(SearchPage.Title, null),
+                            React.createElement(SearchPage.Search, {searchType:"Content"}))
+    );
+    React.render(
+            App,
+            document.getElementById('nuno')
+    );
+</script>
+</html>
