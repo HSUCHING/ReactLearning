@@ -12,6 +12,7 @@
 <div>
     <div id="nuno"></div>
     <div id="juno"></div>
+    <div id="kuno"></div>
 </div>
 
 </body>
@@ -91,7 +92,16 @@
             </div>,
             document.getElementById('juno')
     );
-    props.id="z";
+
+
+    var content='<strong>content1</strong>';
+    React.render(
+            <div style={{color:'red',fontWeight:900,fontStyle:'italic'}}>content0
+                <div dangerouslySetInnerHTML={{__html: content}}></div>
+            </div>,
+            document.getElementById('kuno')
+    );
+
 
 </script>
 </html>
