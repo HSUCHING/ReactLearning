@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "739221fd2143794a3332"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "25830fac8eaad1493e66"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -7988,6 +7988,7 @@
 	/**
 	 * Created by Hsuching on 15/9/6.
 	 */
+	//var jQuery = require("jquery");
 	var React = __webpack_require__(106);
 	var Hello = __webpack_require__(216);
 	React.render(React.createElement(Hello, {name: "Nate"}), document.body);
@@ -27269,7 +27270,7 @@
 	var Hello = React.createClass({displayName: "Hello",
 	    render: function(){
 	        return (
-	            React.createElement("h1", null, "Hello ", this.props.name, "!")
+	            React.createElement("h1", null, "Hello, ", this.props.name, "!")
 	            );
 	    }
 	});
