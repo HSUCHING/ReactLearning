@@ -1,0 +1,25 @@
+{
+  "name": "ReactLearning",
+  "version": "1.0.0",
+  "description": "React",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./js/server.js"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "jquery": "^2.1.4",
+    "jsx": "*",
+    "jsx-loader": "*",
+    "react-hot-loader": "^1.1.1",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "react": "^0.12.0"
+  },
+  "author": "Hsuching",
+  "license": "MIT"
+}
