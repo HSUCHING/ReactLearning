@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "25830fac8eaad1493e66"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7b577da825bf19f85693"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -7991,6 +7991,8 @@
 	//var jQuery = require("jquery");
 	var React = __webpack_require__(106);
 	var Hello = __webpack_require__(216);
+	//var $ = require('jquery');
+	console.log($('body'));
 	React.render(React.createElement(Hello, {name: "Nate"}), document.body);
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(217); if (makeExportsHot(module, __webpack_require__(106))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "entry.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
@@ -27266,11 +27268,11 @@
 	 * Created by Hsuching on 15/9/6.
 	 */
 	var React = __webpack_require__(106);
-
+	//console.log($.ajax);
 	var Hello = React.createClass({displayName: "Hello",
 	    render: function(){
 	        return (
-	            React.createElement("h1", null, "Hello, ", this.props.name, "!")
+	            React.createElement("h1", null, "Hello,Great ", this.props.name, "!")
 	            );
 	    }
 	});
